@@ -7,3 +7,4 @@ Author: Mahmood Siddique
 Maintainer: Who to complain to <mahmood1s@gmail.com>
 Description: this package includes multiple function of plot, print, summary etc
 License: What license is it under?
+RoxygenNote: 6.1.1
