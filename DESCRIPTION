@@ -8,5 +8,7 @@ Maintainer: Who to complain to <mahmood1s@gmail.com>
 Description: this package includes multiple function of plot, print, summary etc
 License: What license is it under?
 RoxygenNote: 6.1.1
+Encoding: UTF-8
+LazyData: true
 Suggests: 
     testthat (>= 2.1.0)

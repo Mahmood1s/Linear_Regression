@@ -13,23 +13,20 @@
 The DESCRIPTION file:
 \packageDESCRIPTION{lab4}
 \packageIndices{lab4}
-~~ An overview of how to use the package, including the most important functions ~~
+~~ this package is calculating the linear regression on the dataset provided and the fomula passed to the class. package is using RC class implementation for linear Regression. there are various function which are overloaded like print, summary, plot, coef, pred and resid.  ~~
 }
 \author{
 \packageAuthor{lab4}
 
 Maintainer: \packageMaintainer{lab4}
 }
-\references{
-~~ Literature or other references for background information ~~
-}
-~~ Optionally other standard keywords, one per line, from file KEYWORDS in the R documentation ~~
-~~ directory ~~
-\keyword{ package }
-\seealso{
-~~ Optional links to other man pages, e.g. ~~
-~~ \code{\link[<pkg>:<pkg>-package]{<pkg>}} ~~
-}
 \examples{
-~~ simple examples of the most important functions ~~
+\dontrun{
+mat_obj<-linreg$new(Petal.Length~Sepal.Width+Sepal.Length,data = iris)
+mat_obj$print()
+mat_obj$plot()
+mat_obj$pred()
+mat_obj$resid()
+mat_obj$summary()
+}
 }
