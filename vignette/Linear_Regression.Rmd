@@ -1,0 +1,98 @@
+---
+title: "Linear Regression Package"
+author: "Mahmood Siddique"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Linear Regression Package}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+## **What Package is Calculating**
+
+This package is about to handle multiple linear regression models using linear algebra. LinReg returens values such as Estimate of regression coefficients, residuals, fitted values, degree of freedom and variance, T-Value and P-Value of the regression coefficients using metods like print(), plot(), resid(), pred(), coef() and summary(). you will find some example of methods below. 
+
+# **The function initialized**
+
+The function is called when class object is created (its like constructed of the class), that takes two arguments formula and data set and returns an object of the class linreg. this function is calculating all the variables required for Linear regression like, Regressions coefficients, Fitted Values, Residuals, degree of Freedom, Residual Variance, Variance of Regression Coefficient, T-value of each Coefficient and P-values of each Coefficient.
+
+# **The function print()**
+
+This function is print the coefficients calculated in initialized function according the formula and the dataset provided 
+
+# **The function plot()**
+
+This function is plotting the two graphs, one between Residuals & Fitted Value and other is between Fitted Values & Standardised Residual. A theme is also created for Liu according the guidlines provided on university URL. 
+
+# **The function resid()**
+
+This function is returning a vector of Residuals
+
+# **The function pred()**
+
+This function is returning the predicted values
+
+# **The function coef()**
+
+This function is returning the coefficients as a named vector
+
+# **The function summary()**
+
+This function is printing same printout statements as print function but it also include the standard errors, T-Value and P-Value along with a statement of residuals on degree of freedom
+
+## Print
+
+This is what print function suppose to print
+```{r}
+load("~/R Packages/lab4/vignette/data.RData")
+mod_obj<-linreg$new(Petal.Length~Sepal.Width+Sepal.Length,data = iris)
+mod_obj$print()
+```
+## Plots
+
+The figure sizes have been customised so that you can easily put two images side-by-side. 
+
+```{r,fig.width=7, fig.height=3}
+mod_obj<-linreg$new(Petal.Length~Sepal.Width+Sepal.Length,data = iris)
+mod_obj$plot()
+```
+
+## resid
+
+This is what resid function suppose to print
+```{r}
+mod_obj<-linreg$new(Petal.Length~Sepal.Width+Sepal.Length,data = iris)
+out_put<-mod_obj$resid()
+out_put[1:5]
+```
+## Pred
+
+This is what pred function suppose to print
+```{r}
+mod_obj<-linreg$new(Petal.Length~Sepal.Width+Sepal.Length,data = iris)
+out_put<-mod_obj$pred()
+out_put[1:5]
+```
+## coef
+
+This is what coef function suppose to print
+```{r}
+mod_obj<-linreg$new(Petal.Length~Sepal.Width+Sepal.Length,data = iris)
+mod_obj$coef()
+```
+## Summary
+
+This is what Summary function suppose to print
+```{r}
+mod_obj<-linreg$new(Petal.Length~Sepal.Width+Sepal.Length,data = iris)
+mod_obj$summary()
+
+

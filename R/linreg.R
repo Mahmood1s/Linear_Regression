@@ -144,7 +144,7 @@ linreg<-setRefClass("linreg", fields = list(formula="formula",data="data.frame",
                       #p2<-qplot(fitted_val,std_res,main="Scale-Location", xlab="Fitted Values",
                       #      ylab="|Standardized Residual|")
                       #p2<-p2+my_theme
-                      figure<-grid.arrange(plot1,plot2,ncol=1,nrow=2)
+                      figure<-grid.arrange(plot1,plot2,ncol=2,nrow=1)
                       figure
                      
                     },
