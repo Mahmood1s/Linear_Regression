@@ -16,8 +16,8 @@
 #'mat_obj$plot()
 #'mat_obj$resid()
 #'mat_obj$summary()
-
 #'}
+#'@export linreg
 
 linreg<-setRefClass("linreg", fields = list(formula="formula",data="data.frame",
                                             beta_cap ="matrix",y = "numeric",
